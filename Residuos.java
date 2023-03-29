@@ -108,21 +108,21 @@ public class Residuos extends JPanel implements ItemListener, ActionListener{
     public String Organico(){
         String nom = nombre.getText();
         String doc = documento.getText();
-        String texto = (nom + ", con identificacion " + doc + ", \ntu residuo es organico. Debe ir en la basura verde.");
+        String texto = (" " + nom + ", con identificacion " + doc + ", \n tu residuo es organico. Debe ir en la basura verde.\n En esta caneca deben ir restos de comidas y \n desechos agricolas.");
         return texto;
     }
 
     public String Inorganico(){
         String nom = nombre.getText();
         String doc = documento.getText();
-        String texto = (nom + ", con identificacion " + doc + ", \ntu residuo es inorganico. Debe ir en la basura negro.");
+        String texto = (" " +nom + ", con identificacion " + doc + ", \n tu residuo es inorganico. Debe ir en la basura \n negro. En esta caneca deben ir papeles, servilletas \n y cartones con restos de comida.");
         return texto;
     }
 
     public String Reciclable(){
         String nom = nombre.getText();
         String doc = documento.getText();
-        String texto = (nom + ", con identificacion " + doc + ", \ntu residuo es reciclable. Debe ir en la basura blanco.");
+        String texto = (" " +nom + ", con identificacion " + doc + ", \n tu residuo es reciclable. Debe ir en la basura blanco.\n En esta caneca deben ir plastico, carton, vidrio, \n papel y metales.");
         return texto;
     }
 
