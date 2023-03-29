@@ -53,13 +53,24 @@ public class Residuos extends JPanel implements ItemListener, ActionListener{
 
         //set component bounds (only needed by Absolute Positioning)
         labelResiduo.setBounds (190, 90, 100, 25);
+        labelResiduo.setFont(new java.awt.Font("Arial",1,12));
         opResiduos.setBounds (190, 120, 100, 25);
+        opResiduos.setFont(new java.awt.Font("Arial",1,12));
         labelNombre.setBounds (325, 90, 100, 25);
+        labelNombre.setFont(new java.awt.Font("Arial",1,12));
         nombre.setBounds (325, 120, 100, 25);
+        nombre.setFont(new java.awt.Font("Arial",1,12));
         labelDocumento.setBounds (460, 90, 100, 25);
+        labelDocumento.setFont(new java.awt.Font("Arial",1,12));
         documento.setBounds (460, 120, 100, 25);
+        documento.setFont(new java.awt.Font("Arial",1,12));
         textField.setBounds (190, 170, 370, 120);
+        textField.setFont(new java.awt.Font("Arial",1,14));
         bSalida.setBounds (460, 305, 100, 25);
+        bSalida.setFont(new java.awt.Font("Arial",1,12));
+
+        //Paneles colores
+        setBackground (new Color (0, 102, 0));
     }
 
     public void itemStateChanged(ItemEvent e) {
@@ -104,14 +115,14 @@ public class Residuos extends JPanel implements ItemListener, ActionListener{
     public String Inorganico(){
         String nom = nombre.getText();
         String doc = documento.getText();
-        String texto = (nom + ", con identificacion " + doc + ", \ntu residuo es inorganico. Debe ir en la basura azul.");
+        String texto = (nom + ", con identificacion " + doc + ", \ntu residuo es inorganico. Debe ir en la basura negro.");
         return texto;
     }
 
     public String Reciclable(){
         String nom = nombre.getText();
         String doc = documento.getText();
-        String texto = (nom + ", con identificacion " + doc + ", \ntu residuo es reciclable. Debe ir en la basura gris.");
+        String texto = (nom + ", con identificacion " + doc + ", \ntu residuo es reciclable. Debe ir en la basura blanco.");
         return texto;
     }
 
@@ -137,3 +148,4 @@ public class Residuos extends JPanel implements ItemListener, ActionListener{
         (new Residuos()).Menu();
     }
 }
+
