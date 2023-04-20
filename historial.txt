@@ -1,0 +1,12 @@
+Nombre: Marian
+Documento: 1035000161
+Caneca: negro
+Material: Restos de comida
+Color: Amarillo
+Calificacion: Buena
+Nombre: Sebastian
+Documento: 1034987222
+Caneca: blanco
+Material: Productos de higiene personal
+Color: Verde
+Calificacion: Muy buena
