@@ -66,10 +66,10 @@ public class Entrada extends JPanel implements ItemListener, ActionListener{
         labelResiduo.setFont(new java.awt.Font("Arial",1,12));
         opResiduos.setBounds (190, 120, 125, 25);
         opResiduos.setFont(new java.awt.Font("Arial",1,12));
-        labelNombre.setBounds (360, 90, 125, 25);
-        labelNombre.setFont(new java.awt.Font("Arial",1,12));
-        nombre.setBounds (360, 120, 125, 25);
-        nombre.setFont(new java.awt.Font("Arial",1,12));
+        labelColor.setBounds (360, 90, 125, 25);
+        labelColor.setFont(new java.awt.Font("Arial",1,12));
+        colorBasura.setBounds (360, 120, 125, 25);
+        colorBasura.setFont(new java.awt.Font("Arial",1,12));
         labelDocumento.setBounds (360,170, 125, 25);
         labelDocumento.setFont(new java.awt.Font("Arial",1,12));
         documento.setBounds (360, 200, 125, 25);
@@ -78,10 +78,10 @@ public class Entrada extends JPanel implements ItemListener, ActionListener{
         textField.setFont(new java.awt.Font("Arial",1,14));
         bDone.setBounds (360, 380, 100, 25);
         bDone.setFont(new java.awt.Font("Arial",1,12));
-        labelColor.setBounds(190,170,125,25);
-        labelColor.setFont(new java.awt.Font("Arial",1,12));
-        colorBasura.setBounds(190,200,125,25);
-        colorBasura.setFont(new java.awt.Font("Arial",1,12));
+        labelNombre.setBounds(190,170,125,25);
+        labelNombre.setFont(new java.awt.Font("Arial",1,12));
+        nombre.setBounds(190,200,125,25);
+        nombre.setFont(new java.awt.Font("Arial",1,12));
 
         //Paneles colores
         setBackground (new Color (150, 240, 75));
@@ -91,17 +91,17 @@ public class Entrada extends JPanel implements ItemListener, ActionListener{
         if (e.getSource()==opResiduos) {
             String seleccionado=(String)opResiduos.getSelectedItem();
             if (seleccionado.equals("Papel")||seleccionado.equals("Carton")||seleccionado.equals("Plastico")) {
-                Organico organico = new Organico();
-                color = organico.getColor();
-                textField.setText(Procesamiento.indicarCaneca() + organico.getColor());
-            } else if (seleccionado.equals("Restos de comida")||seleccionado.equals("Restos de cafe")||seleccionado.equals("Restos de te")) {
-                Inorganico inorganico = new Inorganico();
-                color = inorganico.getColor();
-                textField.setText(Procesamiento.indicarCaneca() + inorganico.getColor());
-            } else if (seleccionado.equals("Productos de higiene personal")||seleccionado.equals("Productos de uso unico")) {
                 Reciclable reciclable = new Reciclable();
                 color = reciclable.getColor();
                 textField.setText(Procesamiento.indicarCaneca() + reciclable.getColor());
+            } else if (seleccionado.equals("Restos de comida")||seleccionado.equals("Restos de cafe")||seleccionado.equals("Restos de te")) {
+                Organico organico = new Organico();
+                color = organico.getColor();
+                textField.setText(Procesamiento.indicarCaneca() + organico.getColor());
+            } else if (seleccionado.equals("Productos de higiene personal")||seleccionado.equals("Productos de uso unico")) {
+                Inorganico inorganico = new Inorganico();
+                color = inorganico.getColor();
+                textField.setText(Procesamiento.indicarCaneca() + inorganico.getColor());
             } else {
                 textField.setText("No se ha seleccionado ningun residuo.");
             }
